@@ -14,17 +14,29 @@
 <script>
 //examples in slides
 // #1
-
-
+let myBoolean = true;
+let myNumber = 5;
+let mySecondNumber = 5.0;
+let myString = "peanuts and m&m's"; //6/16
 // #2
-
-
-
+let a = 5;
+a = 7;
+//this is fine
 // #3
-
-
-
+const b = 5;
+//this is not okay
+b = 10;
 // #4
+var b = 5;
+//this is not okay
+b = 10;
+// #5
+let myString = "gummy bears";
+//myString === null
+myString = null;
+// #6
+let unassignedVariable;
+//unassignedVariable = undefinedVariable
 
 
 </script>
@@ -36,14 +48,20 @@
     let c   = 15;
     const d = '5';
     let e   = 'my name';
-    const f = 'is liz';
+    const f = 'is Danielius';
+    let g = 'I am';
 
     console.group('Addition');
-
+    console.log(a + b);//13
+    console.log(a + d);//105
+    console.log(e + ' ' + f);//my name is Danielius
+    console.log(g +=' Batman');//my name is Batman
     console.groupEnd();
-
+    
     console.group('Multiplication');
-
+    console.log(a * 3);//30
+    console.log(a * b);//30
+    console.log(b * c);//45
     console.groupEnd();
 
     a++;
@@ -51,7 +69,9 @@
     --b;
     c += a;
     console.group('Incrementing');
-
+    console.log(a);//11
+    console.log(b);//1
+    console.log(c);//26
     console.groupEnd();  
 </script>
 </body>
